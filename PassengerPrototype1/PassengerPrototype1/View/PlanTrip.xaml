@@ -1,0 +1,44 @@
+﻿<Page
+    x:Class="PassengerPrototype1.View.PlanTrip"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:PassengerPrototype1.View"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="#FF819CF9">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="5*"/>
+            <RowDefinition Height="26*"/>
+            <RowDefinition Height="5*"/>
+        </Grid.RowDefinitions>
+        <TextBlock x:Name="GameTitle" HorizontalAlignment="Center" TextWrapping="Wrap" Text="Train Simulation - Passenger"  VerticalAlignment="Center" Height="65" Width="600" FontSize="48" Margin="710,40,610,45"/>
+        <Grid x:Name="MainArea" Grid.Row="1" Background="White">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="5*"/>
+                <ColumnDefinition Width="3*"/>
+                <ColumnDefinition Width="5*"/>
+            </Grid.ColumnDefinitions>
+            <StackPanel Grid.Column="1">
+                <TextBlock x:Name="PageTitle" HorizontalAlignment="Left" Height="NaN" Text="Plan Trip" VerticalAlignment="Top" Width="NaN" FontSize="36" Margin="0,50,0,0"/>
+                <TextBlock x:Name="TravelTypeTitle" HorizontalAlignment="Left" Height="NaN" TextWrapping="Wrap" Text="Type of Journey" VerticalAlignment="Top" Width="NaN" FontSize="24" Margin="0,25,0,0" FontFamily="Tw Cen MT"/>
+                <ComboBox x:Name="TravelTypeComboBox" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120"/>
+                <TextBlock x:Name="FromCityTitle" HorizontalAlignment="Left" Height="45" TextWrapping="Wrap" Text="From" VerticalAlignment="Top" Width="160" FontFamily="Tw Cen MT" FontSize="24" Margin="0,25,0,0"/>
+                <ComboBox x:Name="FromComboBox" HorizontalAlignment="Left" Margin="155,0,-275,0" VerticalAlignment="Top" Width="120"/>
+                <TextBlock x:Name="ToDestinationCityTitle" HorizontalAlignment="Left" Height="45" TextWrapping="Wrap" Text="To" VerticalAlignment="Top" Width="160" FontFamily="Tw Cen MT" FontSize="24" Margin="0,25,0,0"/>
+                <ComboBox x:Name="ToDestinationCityComboBox" HorizontalAlignment="Left" Margin="155,0,-275,0" VerticalAlignment="Top" Width="120"/>
+                <TextBlock x:Name="TimeOfDayTitle" HorizontalAlignment="Left" Height="35" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Width="160" FontFamily="Tw Cen MT" FontSize="24" Margin="0,25,0,0"/>
+                <TimePicker x:Name="TimeOfDayTimePicker" HorizontalAlignment="Left" Margin="113,0,-113,0" VerticalAlignment="Top"/>
+                <StackPanel x:Name="TimeOfDayPanel" Orientation="Horizontal" Height="0">
+                    <RadioButton x:Name="DepartureRadioButton" Content="Departure" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                    <RadioButton x:Name="ArrivalRadioButton" Content="Arrival" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                </StackPanel>
+                <Button x:Name="BuyTicketButton" Content="Buy ticket" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,100,0,0" FontFamily="Tw Cen MT" FontSize="48"/>
+
+            </StackPanel>
+
+        </Grid>
+
+    </Grid>
+</Page>

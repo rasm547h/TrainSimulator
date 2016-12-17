@@ -1,0 +1,35 @@
+﻿<Page
+    x:Class="PassengerPrototype1.View.BuyTicket"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:PassengerPrototype1.View"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="#FF819CF9">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="5*"/>
+            <RowDefinition Height="26*"/>
+            <RowDefinition Height="5*"/>
+        </Grid.RowDefinitions>
+        <TextBlock x:Name="GameTitle" HorizontalAlignment="Center" TextWrapping="Wrap" Text="Train Simulation - Passenger"  VerticalAlignment="Center" Height="65" Width="600" FontSize="48" Margin="710,40,610,45"/>
+        <Grid x:Name="MainArea" Grid.Row="1" Background="White">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="5*"/>
+                <ColumnDefinition Width="3*"/>
+                <ColumnDefinition Width="5*"/>
+            </Grid.ColumnDefinitions>
+            <StackPanel x:Name="FormulaArea" Grid.Column="1">
+                <TextBlock x:Name="PageTitle" HorizontalAlignment="Center" Height="NaN" Text="Buy Ticket" VerticalAlignment="Top" Width="NaN" FontSize="36" Margin="0,50,0,0"/>
+                <TextBlock x:Name="FromStationTitle" HorizontalAlignment="Left" Height="NaN" TextWrapping="Wrap" Text="From" VerticalAlignment="Top" Width="NaN" FontSize="24" Margin="0,25,0,0" FontFamily="Tw Cen MT" />
+                <ComboBox x:Name="FromStationComboBox" HorizontalAlignment="Left" VerticalAlignment="Top" Height="40" Width="443"/>
+                <TextBlock x:Name="ToStationTitle" HorizontalAlignment="Left" Height="NaN" TextWrapping="Wrap" Text="To" VerticalAlignment="Top" Width="NaN" FontSize="24" Margin="0,25,0,0" FontFamily="Tw Cen MT"/>
+                <ComboBox x:Name="ToStationComboBox" HorizontalAlignment="Left" VerticalAlignment="Top" Width="443" Height="40"/>
+                <TextBlock x:Name="DiscountTitle" HorizontalAlignment="Left" Height="NaN" TextWrapping="Wrap" Text="Discount" VerticalAlignment="Top" Width="NaN" FontSize="24" Margin="0,25,0,0" FontFamily="Tw Cen MT"/>
+                <ComboBox x:Name="DiscountComboBox" HorizontalAlignment="Left" VerticalAlignment="Top" Width="443" Height="40"/>
+                <Button x:Name="StartTravelling" Content="Start trip" HorizontalAlignment="Center" Margin="0,100,0,0" FontSize="48" FontFamily="Tw Cen MT"/>
+            </StackPanel>
+        </Grid>
+    </Grid>
+</Page>
